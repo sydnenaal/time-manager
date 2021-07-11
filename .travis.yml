@@ -1,8 +1,10 @@
 language: node_js
 node:
     - 12
+before_install:
+	- npm i lerna
 install:
-    - npm run bootstrap
+    - npm run boot
 script:
     - lerna run --scope 'time-manager-api' build
     - lerna run --scope 'time-manager-frontend' build

@@ -1,8 +1,10 @@
 {
-  "name": "root",
-  "private": true,
-  "scripts": {},
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  }
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "boot": "lerna bootstrap"
+    },
+    "devDependencies": {
+        "lerna": "^3.22.1"
+    }
 }

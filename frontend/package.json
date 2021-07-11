@@ -22,6 +22,8 @@
         "test": "jest"
     },
     "dependencies": {
+        "@emotion/react": "^11.4.0",
+        "@emotion/styled": "^11.3.0",
         "effector": "^21.8.12",
         "effector-react": "^21.3.3",
         "ramda": "^0.27.1",

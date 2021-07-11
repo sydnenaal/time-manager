@@ -1,12 +1,13 @@
 import { render } from "@testing-library/react"
 import { unmountComponentAtNode } from "react-dom";
-import { Button } from "./Button"
+import { Button } from "../../Atoms/Button/Button";
+import { Form } from "./Form"
 
-describe('<Button />', () => {
-    let container: HTMLButtonElement | null = null;
+describe('<Form />', () => {
+    let container: HTMLDivElement | null = null;
 
     beforeEach(() => {
-        container = document.createElement('button')
+        container = document.createElement('div')
         document.body.appendChild(container);
     })
 
@@ -19,7 +20,7 @@ describe('<Button />', () => {
     })
 
     it('should renders correctly', () => {
-        const tree = render(<Button children='hello' />)
+        const tree = render(<Form children={<Button children='simple button' />} />)
         expect(tree).toMatchSnapshot();
     })
   

@@ -4,5 +4,6 @@ node:
 before_install: npm i lerna
 install: npm run boot
 script:
-    - lerna run --scope 'time-manager-api' build
-    - lerna run --scope 'time-manager-frontend' build
+    - lerna run --scope time-manager-frontend test
+    - lerna run --scope time-manager-api build
+    - lerna run --scope time-manager-frontend build

@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "jsx": "react-jsx",
+        "noEmitOnError": true,
+        "noUnusedLocals": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "baseUrl": "./",
+        "paths": {
+            "Components": ["src/Components"],
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

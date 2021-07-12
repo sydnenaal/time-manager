@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import { unmountComponentAtNode } from 'react-dom'
-import { Button } from '../../Atoms/Button/Button'
-import { AuthForm } from './AuthForm'
+import { Button } from '../../../Atoms/Button/Button'
+import { AuthForm } from '../AuthForm'
 
 describe('<AuthForm />', () => {
     let container: HTMLDivElement | null = null

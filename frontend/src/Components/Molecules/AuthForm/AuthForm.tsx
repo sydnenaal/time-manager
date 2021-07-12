@@ -1,10 +1,6 @@
-import { memo, ReactNode } from 'react'
-
+import { memo } from 'react'
+import { IFormProps } from './interface'
 import { StyledForm } from './AuthForm.styles'
-
-interface IFormProps {
-    children: ReactNode
-}
 
 export const AuthForm = memo(({ children }: IFormProps) => {
     return <StyledForm>{children}</StyledForm>

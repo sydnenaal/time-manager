@@ -1,9 +1,23 @@
 language: node_js
 node:
     - 12
+
 before_install: npm i lerna
 install: npm run boot
-script:
-    - lerna run --scope time-manager-frontend test
-    - lerna run --scope time-manager-api build
-    - lerna run --scope time-manager-frontend build
+
+jobs:
+    include:
+        - stage: Test
+          name: Frontend
+          install: skip
+          script: lerna run --scope time-manager-frontend test
+
+        - stage: Build
+          name: Backend
+          install: skip
+          script: lerna run --scope time-manager-api build
+
+        - stage: Build
+          name: Frontend
+          install: skip
+          script: lerna run --scope time-manager-frontend build

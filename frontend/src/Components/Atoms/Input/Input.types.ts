@@ -1,6 +1,8 @@
+import { ChangeEvent } from 'react'
+
 export interface InputProps {
     value: string
-    onChange: (value: string) => void
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void
     placeholder?: string
     autoFocus?: boolean
     name?: string

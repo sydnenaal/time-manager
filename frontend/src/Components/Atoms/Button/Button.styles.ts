@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { StyleButtonProps } from './interface'
+import { StyleButtonProps } from './Button.types'
 
 export const StyledButton = styled.button<StyleButtonProps>`
     width: ${(props) => props.width}px;

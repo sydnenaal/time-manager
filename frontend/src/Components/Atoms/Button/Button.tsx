@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { IProps } from './interface'
+import { IProps } from './Button.types'
 import { StyledButton } from './Button.styles'
 
 

@@ -1,13 +1,11 @@
-import { InputProps } from './interface'
+import { InputProps } from './Input.types'
 
-const Input: React.FC<InputProps> = ({ onChange, value, ...rest }) => {
+export const Input = ({ onChange, value, ...rest }: InputProps) => {
     return (
         <input
             value={value}
-            onChange={({ target: { value } }) => onChange(value)}
+            onChange={onChange}
             {...rest}
         />
     )
 }
-
-export default Input

@@ -20,15 +20,15 @@ frontend stack:
 ## Install
 
 Global install of lerna is recomended.
-```
+```bash
 $ npm i -g lerna
 ```
 Install dependencies:
-```
+```bash
 $ lerna bootstrap
 ```
 Add new packages:
-```
+```bash
 $ lerna add <package-name> --scope <app-scope> [--params]
 ```
 ## Licence

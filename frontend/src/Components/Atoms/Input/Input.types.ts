@@ -1,8 +1,9 @@
-import { ChangeEvent } from 'react'
+import { ChangeEvent, FocusEvent } from 'react'
 
 export interface InputProps {
     value: string
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+    onBlur?: (e: FocusEvent<HTMLInputElement>) => void
     placeholder?: string
     autoFocus?: boolean
     name?: string

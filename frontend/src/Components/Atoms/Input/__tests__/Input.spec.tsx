@@ -1,16 +1,14 @@
-import React from 'react'
+import { ChangeEvent } from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import { Input } from '../Input'
-
+// this is problem place !!!
+const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+}
 describe('<Input />', () => {
-    const event = {
-        preventDefault() {},
-        target: { value: 'the-value' }
-    } as React.ChangeEvent<HTMLInputElement>;
     test('render email input', () => {
-        render(<Input value={'test'} onChange={() => event} type={'email'} />)
+        render(<Input value='test' onChange={onChange} type='email' />)
 
         const inputEl = screen.getByDisplayValue('test')
         expect(inputEl).toBeInTheDocument()
@@ -18,7 +16,7 @@ describe('<Input />', () => {
     })
 
     test('pass valid email to test email input field', () => {
-        render(<Input value={'test@mail.com'} onChange={() => event} type={'email'} />)
+        render(<Input value='test@mail.com' onChange={onChange} type='email' />)
 
         const inputEl = screen.getByDisplayValue('test@mail.com')
         userEvent.type(inputEl, 'test@mail.com')

@@ -1,0 +1,1 @@
+web: PORT=$PORT node ./api/build/index.js

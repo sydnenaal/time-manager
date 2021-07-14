@@ -16,3 +16,21 @@ frontend stack:
 -   jest
 -   ramda
 -   effector
+
+## Install
+
+Global install of lerna is recomended.
+```
+$ npm i -g lerna
+```
+Install dependencies:
+```
+$ lerna bootstrap
+```
+Add new packages:
+```
+$ lerna add <package-name> --scope <app-scope> [--params]
+```
+## Licence
+
+MIT © Erokhin Dmitriy

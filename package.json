@@ -3,8 +3,7 @@
     "private": true,
     "scripts": {
         "boot": "lerna bootstrap",
-        "heroku-prebuild": "npm i -g lerna && npm run boot",
-        "build": "cd ./frontend && npm run build && cd ../api && npm run build",
+        "build": "lerna bootstrap && lerna run --parallel build",
         "start": "node ./api/build/index.js"
     },
     "devDependencies": {

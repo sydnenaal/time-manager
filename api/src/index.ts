@@ -1,12 +1,20 @@
-// Require the framework and instantiate it
-const fastify = require('fastify')({ logger: true })
+const path = require('path')
 
-// Declare a route
-fastify.get('/', async (request) => {
-  return { hello: 'world' }
+const log = require('pino')({ level: 'info' })
+const fastify = require('fastify')({ logger: log })
+
+fastify.register(require('fastify-static'), {
+  root: path.join(__dirname, '../static')
 })
 
-// Run the server!
+fastify.setNotFoundHandler((req, res) => {
+  res.sendFile('index.html')
+})
+
+fastify.register(async () => {
+  return { hello: 'world' }
+}, { prefix: '/api' })
+
 const start = async () => {
   try {
     await fastify.listen(3000)

@@ -1,11 +1,17 @@
 {
-    "compilerOptions": {
-    	"esModuleInterop": true,
-    	"outDir": "dist",
-    	"baseUrl": "."
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["es2016"],
+    "paths": {
+      "*": ["src/*"]
     },
-    "exclude": [
-    	"node_modules",
-      "src/**/*.spec.ts"
-  ]
+    "allowJs": true,
+    "target": "es2016",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./build"
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "./src/**/__tests__/*.ts"]
 }

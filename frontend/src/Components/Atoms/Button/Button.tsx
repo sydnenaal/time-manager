@@ -1,10 +1,11 @@
-import { memo } from 'react'
+import { memo, ReactNode } from 'react'
 
-import { IProps } from './Button.types'
 import { StyledButton } from './Button.styles'
 
-export const Button = memo(({ children, width, height }: IProps) => {
-    return <StyledButton width={width} height={height}>{children}</StyledButton>
-})
+interface IButtonProps {
+    children: ReactNode
+}
 
-Button.displayName = 'Button'
+export const Button = memo(({ children }: IButtonProps) => {
+    return <StyledButton>{children}</StyledButton>
+})

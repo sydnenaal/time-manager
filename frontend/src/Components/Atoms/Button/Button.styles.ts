@@ -1,10 +1,9 @@
 import styled from '@emotion/styled'
-import { StyleButtonProps } from './Button.types'
 
-export const StyledButton = styled.button<StyleButtonProps>`
-    width: ${(props) => props.width}px;
-    height: ${(props) => props.height}px;
-    font-size: ${(props) => props.size}px;
+export const StyledButton = styled.button`
+    min-width: 100px;
+    min-height: 40px;
+    font-size: 15px;
     border: none;
     cursor: pointer;
 `

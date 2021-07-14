@@ -1,6 +1,7 @@
 const path = require('path')
 
-const fastify = require('fastify')({ logger: true })
+const log = require('pino')({ level: 'info' })
+const fastify = require('fastify')({ logger: log })
 
 fastify.register(require('fastify-static'), {
   root: path.join(__dirname, '../static')
@@ -10,9 +11,9 @@ fastify.setNotFoundHandler((req, res) => {
   res.sendFile('index.html')
 })
 
-fastify.get('/', async () => {
+fastify.register(async () => {
   return { hello: 'world' }
-})
+}, { prefix: '/api' })
 
 const start = async () => {
   try {

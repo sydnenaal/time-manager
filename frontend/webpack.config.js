@@ -33,11 +33,11 @@ module.exports = (env, argv) => {
             filename: watchMode
                 ? 'assets/[name].[hash].js'
                 : 'assets/[name].[chunkhash].js',
-            path: path.resolve(__dirname, '../dist'),
+            path: path.resolve(__dirname, '../api/static'),
             publicPath: '/',
         },
         devServer: {
-            contentBase: path.join(__dirname, '../dist'),
+            contentBase: path.join(__dirname, '../api/static'),
             compress: true,
             port: 8000,
             watchContentBase: true,

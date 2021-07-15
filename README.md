@@ -31,6 +31,23 @@ Add new packages:
 ```bash
 $ lerna add <package-name> --scope <app-scope> [--params]
 ```
+
+## Run
+
+Run frontend app in development mode:
+```bash
+$ cd ./frontend && npm run start:dev
+```
+
+Before API project start, run frontend build:
+```bash
+$ cd ./frontend && npm run build
+```
+Then run:
+```bash
+$ cd ../api && npm run build && npm run start
+```
+
 ## Licence
 
 MIT © Erokhin Dmitriy

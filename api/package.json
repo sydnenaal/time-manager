@@ -5,12 +5,8 @@
     "author": "sydnenaal <dimasymbain@gmail.com>",
     "license": "ISC",
     "main": "src/index.ts",
-    "directories": {
-        "src": "src"
-    },
-    "files": [
-        "src"
-    ],
+    "directories": { "src": "src" },
+    "files": [ "src" ],
     "scripts": {
         "start": "node ./build/index.js",
         "test": "NODE_ENV=test npx jest --verbose --runInBand",

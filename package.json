@@ -1,0 +1,17 @@
+{
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "boot": "lerna bootstrap",
+        "build": "lerna bootstrap && lerna run --parallel build",
+        "start": "node ./api/build/index.js",
+        "lint:frontend": "lerna run lint --scope time-manager-frontend",
+        "test:frontend": "lerna run test --scope time-manager-frontend",
+        "test:api": "lerna run test --scope time-manager-api",
+        "build:frontend": "lerna run build --scope time-manager-frontend",
+        "build:api": "lerna run build --scope time-manager-api"
+    },
+    "devDependencies": {
+        "lerna": "^3.22.1"
+    }
+}

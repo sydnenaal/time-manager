@@ -1,0 +1,11 @@
+# modules
+node_modules/
+
+# production
+
+build/
+static/
+
+# log files
+
+lerna-debug.log

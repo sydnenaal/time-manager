@@ -13,7 +13,7 @@
     ],
     "scripts": {
         "start": "node ./build/index.js",
-        "test": "NODE_ENV=test npx jest --verbose --runInBand",
+        "test": "jest",
         "build": "rimraf build && tsc --sourceMap -p ./"
     },
     "dependencies": {

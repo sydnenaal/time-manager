@@ -1,11 +1,11 @@
 import { memo, useCallback } from 'react'
 import { Formik, FormikHelpers, FormikValues } from 'formik'
-import { IFormProps } from './interface'
+import { IFormProps } from './AuthForm.types'
 import { StyledForm } from './AuthForm.styles'
 import { Input } from '../../Atoms/Input/Input'
 import { Button } from 'Components'
 
-const fakeInitialValues = { name: 'Dima' }
+const fakeInitialValues = { name: "Dima" }
 
 export const AuthForm = memo(({ children }: IFormProps) => {
     const handleOnSubmit = useCallback((values: FormikValues, actions: FormikHelpers<FormikValues>) => {

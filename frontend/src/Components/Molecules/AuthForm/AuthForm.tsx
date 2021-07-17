@@ -3,6 +3,7 @@ import { Formik, FormikHelpers, FormikValues } from 'formik'
 import { IFormProps } from './interface'
 import { StyledForm } from './AuthForm.styles'
 import { Input } from '../../Atoms/Input/Input'
+import { Button } from 'Components'
 
 const fakeInitialValues = { name: 'Dima' }
 
@@ -29,6 +30,11 @@ export const AuthForm = memo(({ children }: IFormProps) => {
                         height={56}
                         value={values.name}
                         name="name"
+                    />
+                    <Button
+                        children="Войти"
+                        width={90}
+                        height={40}
                     />
                     {errors.name && <div>{errors.name}</div>}
                 </form>

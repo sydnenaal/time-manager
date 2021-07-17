@@ -5,7 +5,7 @@ import { StyledForm } from './AuthForm.styles'
 import { Input } from '../../Atoms/Input/Input'
 import { Button } from 'Components'
 
-const fakeInitialValues = { name: "Dima" }
+const fakeInitialValues = { name: "Dima", age: 12 }
 
 export const AuthForm = memo(({ children }: IFormProps) => {
     const handleOnSubmit = useCallback((values: FormikValues, actions: FormikHelpers<FormikValues>) => {
@@ -23,13 +23,22 @@ export const AuthForm = memo(({ children }: IFormProps) => {
             {({ handleSubmit, handleChange, handleBlur, values, errors }) => (
                 <form onSubmit={handleSubmit}>
                     <Input
-                        type="text"
+                        type="email"
                         onChange={handleChange}
                         onBlur={handleBlur}
                         width={481}
                         height={56}
                         value={values.name}
-                        name="name"
+                        name="email"
+                    />
+                    <Input
+                        type="password"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        width={481}
+                        height={56}
+                        value={values.age}
+                        name="password"
                     />
                     <Button
                         children="Войти"

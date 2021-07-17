@@ -4,6 +4,7 @@ export interface StyleButtonProps {
     height?: number
     width?: number
     size?: number
+    onClick?: () => void
 }
 
 export interface IButtonProps {

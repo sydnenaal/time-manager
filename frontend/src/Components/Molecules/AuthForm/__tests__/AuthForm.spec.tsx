@@ -21,7 +21,7 @@ describe('<AuthForm />', () => {
 
     it('should renders correctly', () => {
         const tree = render(
-            <AuthForm children={<Button children="simple button" />} />
+            <AuthForm children={<Button children="simple button" onClick={() => null} />} />
         )
         expect(tree).toMatchSnapshot()
     })

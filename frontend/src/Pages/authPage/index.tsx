@@ -1,10 +1,8 @@
-// import 
+import { AuthForm } from '../../Components/Molecules/AuthForm/AuthForm'
 
 const Auth = () => {
     return (
-        <div>
-            
-        </div>
+        <AuthForm />
     )
 }
 

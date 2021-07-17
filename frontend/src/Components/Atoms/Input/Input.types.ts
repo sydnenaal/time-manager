@@ -14,3 +14,5 @@ export interface StyleInputProps {
     width?: number
     height?: number
 }
+
+export type IProps = InputProps & StyleInputProps

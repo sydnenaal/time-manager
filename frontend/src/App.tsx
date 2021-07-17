@@ -1,10 +1,9 @@
-import { Button } from './Components'
+import Auth from './Pages/authPage'
 
 export function App() {
     return (
         <div>
-            Hello!
-            <Button>Click me!</Button>
+            <Auth />
         </div>
     )
 }

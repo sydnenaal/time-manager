@@ -1,13 +1,38 @@
 language: node_js
-node:
-    - 12
+node: 12
 
-install:
-    - npm i lerna
-    - npm run boot
+cache:
+    directories:
+        - frontend/node_modules
+        - api/node_modules
 
-script:
-    - lerna run --scope time-manager-api test
-    - lerna run --scope time-manager-frontend test
-    - lerna run --scope time-manager-api build
-    - lerna run --scope time-manager-frontend build
+jobs:
+    include:
+        - stage: Install dependencies
+          before_install: npm i lerna
+          install: npm run boot
+
+        - stage: Lint
+          name: frontend
+          install: skip
+          script: npm run lint:frontend
+
+        - stage: Test
+          name: frontend
+          install: skip
+          script: npm run test:frontend
+
+        - stage: Test
+          name: api
+          install: skip
+          script: npm run test:api
+
+        - stage: Build
+          name: frontend
+          install: skip
+          script: npm run build:frontend
+
+        - stage: Build
+          name: api
+          install: skip
+          script: npm run build:api

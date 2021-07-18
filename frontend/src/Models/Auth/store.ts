@@ -1,13 +1,13 @@
 import { createStore, createEvent } from 'effector'
 
 export interface IUserData {
-    login: string
-    email: string
-    fullName: string
+    login?: string
+    email?: string
+    fullName?: string
 }
 
 export interface IAuth {
-    userData: IUserData | {}
+    userData: IUserData
     accessToken: string
 }
 

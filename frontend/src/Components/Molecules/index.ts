@@ -1,1 +1,1 @@
-export const mockMolecule = ''
+export * from './AuthForm'

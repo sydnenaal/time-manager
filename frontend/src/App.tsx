@@ -4,7 +4,7 @@ import { Button } from 'Components'
 
 export const App: FC = () => (
     <div>
-        Hello!
+        Hello
         <Button>Click me!</Button>
     </div>
 )

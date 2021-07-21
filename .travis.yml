@@ -1,10 +1,12 @@
-language: node_js
+language: node
 node: 12
 
 cache:
     directories:
-        - frontend/node_modules
+        - api/build
+        - api/static
         - api/node_modules
+        - frontend/node_modules
 
 jobs:
     include:
@@ -36,3 +38,15 @@ jobs:
           name: api
           install: skip
           script: npm run build:api
+
+        - stage: Deploy
+          name: heroku
+          if: branch = main
+          install: skip
+          script: skip
+          deploy:
+              provider: heroku
+              app: erokhin-time-manager
+              on: main
+              skip_cleanup: true
+              api_key: $SECRET_KEY_HEROKU

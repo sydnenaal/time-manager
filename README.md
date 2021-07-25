@@ -1,7 +1,15 @@
 # time-manager
 
 Dmitry Erokhin's FQW project.
+
 The monorepo makes by `lerna`, and has `api` and `frontend` sections.
+
+CI/CD powered by [Travis CI](https://www.travis-ci.com/)
+
+The app has deployed on heroku: [open app](https://erokhin-time-manager.herokuapp.com/)
+
+Project workflow is powered by JIRA.
+
 
 All project parts powered by `typescript`.
 

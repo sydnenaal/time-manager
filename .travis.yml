@@ -7,7 +7,7 @@ cache:
         - api/static
         - api/node_modules
         - frontend/node_modules
-
+        
 notifications:
     webhooks: $JIRA_WEBHOOK
     on_success: always

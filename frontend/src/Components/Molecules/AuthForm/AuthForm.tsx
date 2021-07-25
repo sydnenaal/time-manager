@@ -21,12 +21,11 @@ export const AuthForm = memo(() => {
           validationSchema={signInSchema}
           onSubmit={handleOnSubmit}
         >
-            {({
- handleSubmit, handleChange, handleBlur, values, errors,
-}) => (
+            {({ handleSubmit, handleChange, handleBlur, values, errors}) => (
                 <form onSubmit={handleSubmit}>
                     <Input
                       type="text"
+                      placeholder='Email Address'
                       onChange={handleChange}
                       onBlur={handleBlur}
                       width={481}
@@ -34,8 +33,10 @@ export const AuthForm = memo(() => {
                       value={values.email}
                       name="email"
                     />
+                    {errors.email && <div style={{ color: 'red', marginBottom: '15px' }}>{errors.email}</div>}
                     <Input
                       type="password"
+                      placeholder='Password'
                       onChange={handleChange}
                       onBlur={handleBlur}
                       width={481}
@@ -43,8 +44,8 @@ export const AuthForm = memo(() => {
                       value={values.password}
                       name="password"
                     />
+                    {errors.password && <div style={{ color: 'red', marginBottom: '15px' }}>{errors.password}</div>}
                     <Button width={90} height={40}>Войти</Button>
-                    {errors.email && <div>{errors.email}</div>}
                 </form>
             )}
         </Formik>

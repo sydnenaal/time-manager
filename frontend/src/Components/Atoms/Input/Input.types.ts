@@ -10,9 +10,13 @@ export interface InputProps {
     type?: 'email' | 'password' | 'text'
 }
 
+export interface ImageProps {
+    src?: any
+}
+
 export interface StyleInputProps {
     width?: number
     height?: number
 }
 
-export type IProps = InputProps & StyleInputProps
+export type IProps = InputProps & StyleInputProps & ImageProps

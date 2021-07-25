@@ -21,11 +21,13 @@ export const AuthForm = memo(() => {
           validationSchema={signInSchema}
           onSubmit={handleOnSubmit}
         >
-            {({ handleSubmit, handleChange, handleBlur, values, errors}) => (
+            {({
+ handleSubmit, handleChange, handleBlur, values, errors,
+}) => (
                 <form onSubmit={handleSubmit}>
                     <Input
                       type="text"
-                      placeholder='Email Address'
+                      placeholder="Email Address"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       width={481}
@@ -36,7 +38,7 @@ export const AuthForm = memo(() => {
                     {errors.email && <div style={{ color: 'red', marginBottom: '15px' }}>{errors.email}</div>}
                     <Input
                       type="password"
-                      placeholder='Password'
+                      placeholder="Password"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       width={481}

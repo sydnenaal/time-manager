@@ -19,7 +19,12 @@ notifications:
 jobs:
     include:
         - stage: Install dependencies
-          before_install: npm i lerna
+          before_install:
+              - npm i lerna
+              - rm -rf api/node_modules
+              - rm -rf frontend/node_modules
+              - rm -rf api/static
+              - rm -rf api/build
           install: npm run boot
 
         - stage: Lint

@@ -1,10 +1,9 @@
 import { FC } from 'react'
 
-import { Button } from 'Components'
+import Auth from './Pages/authPage'
 
 export const App: FC = () => (
-    <div>
-        Hello
-        <Button>Click me!</Button>
-    </div>
-)
+        <div>
+            <Auth />
+        </div>
+    )

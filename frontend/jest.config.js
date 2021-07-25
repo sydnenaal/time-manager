@@ -8,6 +8,6 @@ module.exports = {
     passWithNoTests: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     moduleNameMapper: {
-        'Components(.*)$': '<rootDir>/src/components/$1',
+        'Components(.*)$': '<rootDir>/src/Components/$1',
     },
 }

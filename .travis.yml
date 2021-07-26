@@ -7,11 +7,24 @@ cache:
         - api/static
         - api/node_modules
         - frontend/node_modules
+        
+notifications:
+    webhooks: $JIRA_WEBHOOK
+    on_success: always
+    on_failure: always
+    on_start: always
+    on_cancel: always
+    on_error: always
 
 jobs:
     include:
         - stage: Install dependencies
-          before_install: npm i lerna
+          before_install:
+              - npm i lerna
+              - rm -rf api/node_modules
+              - rm -rf frontend/node_modules
+              - rm -rf api/static
+              - rm -rf api/build
           install: npm run boot
 
         - stage: Lint

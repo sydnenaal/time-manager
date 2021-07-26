@@ -11,7 +11,7 @@ export interface InputProps {
 }
 
 export interface ImageProps {
-    src?: any
+    src?: string
 }
 
 export interface StyleInputProps {

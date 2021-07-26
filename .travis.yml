@@ -7,14 +7,15 @@ cache:
         - api/static
         - api/node_modules
         - frontend/node_modules
-        
+
 notifications:
-    webhooks: $JIRA_WEBHOOK
-    on_success: always
-    on_failure: always
-    on_start: always
-    on_cancel: always
-    on_error: always
+    webhooks:
+        urls: $JIRA_WEBHOOK
+        on_success: always
+        on_failure: always
+        on_start: always
+        on_cancel: always
+        on_error: always
 
 jobs:
     include:

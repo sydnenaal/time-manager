@@ -34,6 +34,11 @@
         "semi": 0,
         "indent": "off",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-indent": "off"
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "comma-dangle": "off",
+        "object-curly-newline": "off",
+        "operator-linebreak": "off",
+        "implicit-arrow-linebreak": "off"
     }
 }
